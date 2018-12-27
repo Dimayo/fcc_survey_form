@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Chakra+Petch");
+
+html {
+    background-color: white;
+    font-family: "Chakra Petch", sans-serif;
+}
+header {
+    text-align: center;
+    color: #0039ff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.form-outer {
+    max-width: 700px;
+    margin: 0 auto;
+    border-width: 1px;
+    border-color: rgba(126, 127, 127, 0.3);
+    border-style: outset;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-top-color: rgba(0, 57, 255, 0.9);
+    border-top-width: 2px;
+    background-color: #fdfdff;
+    color: #62697f;
+    border-radius: 3px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#description {
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.left-column {
+    padding: 20px;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+.right-column {
+    padding: 20px;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+#name,
+#number,
+#email {
+    width: 230px;
+    height: 20px;
+    margin-bottom: 30px;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+#number {
+    width: 60px;
+}
+
+.favorites {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.checkbox,
+.radio {
+    display: none;
+}
+
+.checkbox-custom,
+.radio-custom {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #7e7f7e;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.checkbox-custom,
+.label,
+.radio-custom {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox:checked + .checkbox-custom::before,
+.radio:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: #0039ff;
+}
+
+.radio-custom,
+.radio:checked + .radio-custom::before {
+    border-radius: 50%;
+}
+
+.gender {
+    margin-bottom: 30px;
+}
+
+#dropdown {
+    margin-bottom: 30px;
+    width: 235px;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+#comments {
+    margin-bottom: 30px;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+label,
+h2 {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.input-field {
+    width: 228px;
+}
+
+#submit {
+    border-width: 2px;
+    border-color: #0039ff;
+    font-size: 15px;
+    color: #62697f;
+    width: 170px;
+    height: 40px;
+    transition: 0.5s;
+    background-color: #fdfdff;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    border-radius: 3px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+#submit:hover {
+    background-color: #0039ff;
+    color: #fdfdff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #7e7f7f;
+    transition-property: border-bottom;
+    transition-duration: 0.7s;
+    background-color: #fdfdff;
+    color: #62697f;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    border-bottom: 2px solid #0039ff;
+}
+
+textarea,
+select {
+    border: 2px solid #7e7f7f;
+    transition-property: border;
+    transition-duration: 0.7s;
+    background-color: #fdfdff;
+    color: #62697f;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+textarea:focus,
+select:focus {
+    border: 2px solid #0039ff;
+    outline: none;
+}
+
+@media (max-width: 640px) {
+    #dropdown {
+        width: 90%;
+    }
+
+    .input-field {
+        width: 90%;
+    }
+
+    #name,
+    #email {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .columns {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #description {
+        margin: 10px;
+    }
+
+    .form-outer {
+        margin: 10px 35px;
+    }
+}
