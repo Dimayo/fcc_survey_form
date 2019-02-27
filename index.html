@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,112 +8,105 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
+
 <body>
-<header>
-    <h1 id="title">Survey form</h1>
-</header>
+    <header>
+        <h1 id="title">Survey form</h1>
+    </header>
+    <div class="form-outer">
+        <p id="description">Answer which sport do you prefer </p>
+        <form id="survey-form" action="">
 
-<div class="form-outer">
-    <p id="description">Answer which sport do you prefer </p>
-    <form id="survey-form" action="">
+            <section class="columns">
 
-        <div class="columns">
-
-            <div class="left-column">
-
-                <div class="name">
-                    <label for="name" id="name-label">Name</label>
-                    <input type="text" name="new-name" id="name" placeholder="Enter your name" required>
+                <div class="column">
+                    <div class="name">
+                        <label for="name" id="name-label">Name</label>
+                        <input type="text" name="new-name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="age">
+                        <label for="number" id="number-label">Age</label>
+                        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+                    </div>
+                    <div class="favorites">
+                        <h2> What sports do you like </h2>
+                        <div class="favor-container">
+                            <div class="favor-block">
+                                <label class="favor-label">
+                                    <input class="checkbox" type="checkbox" name="sport" value="1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">Football</span>
+                                </label>
+                                <label class="favor-label">
+                                    <input class="checkbox" type="checkbox" name="sport" value="2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">Basketball</span>
+                                </label>
+                            </div>
+                            <div class="favor-block">
+                                <label class="favor-label">
+                                    <input class="checkbox" type="checkbox" name="sport" value="3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">Hockey</span>
+                                </label>
+                                <label class="favor-label">
+                                    <input class="checkbox" type="checkbox" name="sport" value="4">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">Voleyball</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="age">
-                    <label for="number" id="number-label">Age</label>
-                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
-                </div>
-
-                <div class="favorites">
-                    <h2> What sports do you like </h2>
-                    <div class="form-row">
-                        <label>
-                            <input class="checkbox" type="checkbox" name="sport" value="1" >
-                            <span class="checkbox-custom"></span>
-                            <span class="label">Football</span>
+                <div class="column">
+                    <div class="email">
+                        <label for="email" id="email-label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="gender">
+                        <h2>Gender</h2>
+                        <label class="gender-label">
+                            <input class="radio" type="radio" name="gender" value="1">
+                            <span class="radio-custom"></span>
+                            <span class="label">Male</span>
+                        </label>
+                        <label class="gender-label">
+                            <input class="radio" type="radio" name="gender" value="2">
+                            <span class="radio-custom"></span>
+                            <span class="label">Female</span>
                         </label>
                     </div>
-                    <div class="form-row">
-                        <label>
-                            <input class="checkbox" type="checkbox" name="sport" value="2">
-                            <span class="checkbox-custom"></span>
-                            <span class="label">Basketball</span>
-                        </label>
+                    <div class="frequency">
+                        <label for="dropdown">How often do you play sports</label>
+                        <select name="frequency" id="dropdown">
+                            <option disabled selected>Select an option</option>
+                            <option value="one-time">Once a week</option>
+                            <option value="two-three-time">Two or three times a week</option>
+                            <option value="more-three">More than three times a week</option>
+                            <option value="not-play">I do not play sports</option>
+                        </select>
                     </div>
-                    <div class="form-row">
-                        <label>
-                            <input class="checkbox" type="checkbox" name="sport" value="3">
-                            <span class="checkbox-custom"></span>
-                            <span class="label">Hockey</span>
-                        </label>
-                    </div>
-                    <div class="form-row">
-                        <label>
-                            <input class="checkbox" type="checkbox" name="sport" value="4">
-                            <span class="checkbox-custom"></span>
-                            <span class="label">Voleyball</span>
-                        </label>
-                    </div>
-
                 </div>
-
-            </div>
-
-            <div class="right-column">
-
-                <div class="email">
-                    <label for="email" id="email-label">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                </div>
-
-                <div class="gender">
-                    <h2>Gender</h2>
-                    <label>
-                        <input class="radio" type="radio" name="gender" value="1">
-                        <span class="radio-custom"></span>
-                        <span class="label">Male</span></label>
-                    <label>
-                        <input class="radio" type="radio" name="gender" value="2">
-                        <span class="radio-custom"></span>
-                        <span class="label">Female</span>
-                    </label>
-
-                </div>
-
-                <div class="frequency">
-                    <label for="dropdown">How often do you play sports</label>
-                    <select name="frequency" id="dropdown">
-                        <option disabled selected>Select an option</option>
-                        <option value="one-time">Once a week</option>
-                        <option value="two-three-time">Two or three times a week</option>
-                        <option value="more-three">More than three times a week</option>
-                        <option value="not-play">I do not play sports</option>
-                    </select>
-                </div>
-
+            </section>
+            <div class="textarea-container">
                 <div class="textarea">
                     <label for="comments">Comments</label>
-                    <textarea name="comments" placeholder="Enter your comment here..." class="input-field" id="comments" style="resize:none;" cols="30" rows="6"></textarea>
+                    <textarea name="comments" placeholder="Enter your comment here..." class="input-field" id="comments"
+                        style="resize:none;" rows="8" cols="90"></textarea>
                 </div>
             </div>
+            <div class="btncontainer">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="form-send">
+           <p class="send-text">
+               Thank you for participating in the survey!
+               </p>
         </div>
-
-
-        <div class="btncontainer">
-            <button id="submit" type="submit">Submit</button>
-        </div>
-
-    </form>
-</div>
-
-
+    </div>
 
 </body>
+
 </html>

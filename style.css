@@ -6,6 +6,7 @@ html {
     background-image: url(images/background.jpg);
     background-size: cover;
 }
+
 header {
     text-align: center;
     color: #0039ff;
@@ -21,10 +22,31 @@ header {
     border-style: outset;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-top-color: rgba(0, 57, 255, 0.9);
-    border-top-width: 2px;
+    border-top-width: 4px;
     background-color: #fdfdff;
     color: #62697f;
     border-radius: 3px;
+    position: relative;
+}
+
+.form-send {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #fdfdff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none
+}
+
+.send-text {
+    font-size: 35px;
+    padding: 5%;
+    text-align: center;
+
 }
 
 p {
@@ -41,15 +63,10 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 50px;
+    margin-left: 7%;
 }
 
-.left-column {
-    padding: 20px;
-    flex-grow: 1;
-    flex-basis: 50%;
-}
-.right-column {
+.column {
     padding: 20px;
     flex-grow: 1;
     flex-basis: 50%;
@@ -68,10 +85,6 @@ p {
     width: 60px;
 }
 
-.favorites {
-    margin-top: 30px;
-}
-
 h2 {
     font-size: 15px;
 }
@@ -87,19 +100,18 @@ h2 {
     width: 17px;
     height: 17px;
     border: 2px solid #7e7f7e;
-    margin: 5px;
     border-radius: 3px;
 }
 
+
 .checkbox-custom,
-.label,
 .radio-custom {
     display: inline-block;
     vertical-align: middle;
 }
 
-.checkbox:checked + .checkbox-custom::before,
-.radio:checked + .radio-custom::before {
+.checkbox:checked+.checkbox-custom::before,
+.radio:checked+.radio-custom::before {
     content: "";
     display: block;
     position: absolute;
@@ -111,13 +123,32 @@ h2 {
 }
 
 .radio-custom,
-.radio:checked + .radio-custom::before {
+.radio:checked+.radio-custom::before {
     border-radius: 50%;
 }
 
 .gender {
     margin-bottom: 30px;
+    padding-bottom: 5px;
 }
+
+.gender-label {
+    display: inline;
+    padding-right: 15px;
+}
+
+.favor-container {
+    display: flex;
+}
+
+.favor-block {
+    padding-right: 15px;
+}
+
+.favor-label {
+    padding-bottom: 10px;
+}
+
 
 #dropdown {
     margin-bottom: 30px;
@@ -152,9 +183,13 @@ h2 {
     text-transform: uppercase;
 }
 
-.input-field {
-    width: 228px;
+.textarea-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
 }
+
+
 
 #submit {
     border-width: 2px;
@@ -220,6 +255,12 @@ select:focus {
 }
 
 @media (max-width: 640px) {
+
+    .columns {
+        display: block;
+        margin: 0 auto;
+    }
+
     #dropdown {
         width: 90%;
     }
@@ -231,20 +272,5 @@ select:focus {
     #name,
     #email {
         width: 90%;
-    }
-}
-
-@media (max-width: 550px) {
-    .columns {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #description {
-        margin: 10px;
-    }
-
-    .form-outer {
-        margin: 10px 35px;
     }
 }
