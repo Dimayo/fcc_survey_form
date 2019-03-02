@@ -9,7 +9,9 @@ module.exports = {
         './src/scss/main.scss'
     ],
     output: {
-        filename: './bundle.js'
+        path: path.resolve(__dirname, './docs/'),
+        filename: './bundle.js',
+        publicPath: 'docs/'
     },
     module: {
         rules: [{
