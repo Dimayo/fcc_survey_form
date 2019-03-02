@@ -1,7 +1,5 @@
 //Form send
 (function formSend() {
-    "use strict";
-
     let form = document.querySelector('.survey-form'),
         sendForm = document.querySelector('.form-send');
 

@@ -1,0 +1,44 @@
+.survey-form {
+    max-width: 700px;
+    margin: auto;
+    border-width: 1px;
+    border-color: rgba(126, 127, 127, 0.3);
+    border-style: outset;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-top-color: $blue;
+    border-top-width: 4px;
+    background-color: $background;
+    color: $text-color;
+    border-radius: 3px;
+    position: relative;
+
+    &__description {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &__columns {
+        display: block;
+        margin: 0 auto;
+
+        @media (min-width: 560px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 5%;
+        }
+
+        @media (min-width: 640px) {
+            margin: 0;
+            margin-left: 7%;
+        }
+    }
+
+    &__column {
+        padding: 20px;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+}

@@ -1,0 +1,18 @@
+.input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $gray;
+    transition-property: border-bottom;
+    transition-duration: 0.7s;
+    background-color: $background;
+    color: $text-color;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: $font;
+       
+
+    &:focus {
+        border-bottom: 2px solid $blue;
+    }
+}

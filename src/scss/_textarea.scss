@@ -1,0 +1,13 @@
+.textarea {
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+
+    &__width {
+        width: 90%;
+
+        @media (min-width: 560px) {
+            width: 98%;
+        }
+    }
+}

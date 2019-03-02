@@ -1,0 +1,29 @@
+.standart-button {
+    display: none;
+}
+
+.custom-button {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $gray;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.standart-button:checked+.custom-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: $blue;
+}
+
+.custom-button_radio,
+.standart-button:checked+.custom-button_radio::before {
+    border-radius: 50%;
+}

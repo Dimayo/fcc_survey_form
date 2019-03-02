@@ -1,0 +1,18 @@
+.boxes {
+    border: 2px solid $gray;
+    transition-property: border;
+    transition-duration: 0.7s;
+    background-color: $background;
+    color: $text-color;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Chakra Petch",
+        sans-serif;
+
+    &:focus {
+        border: 2px solid $blue;
+        outline: none;
+    }
+}

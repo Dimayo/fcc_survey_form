@@ -1,0 +1,13 @@
+.favorites {
+    &__inner {
+        display: flex;
+    }
+
+    &__block {
+        padding-right: 15px;
+    }
+
+    &__label {
+        padding-bottom: 10px;
+    }
+}
